@@ -344,12 +344,21 @@
 @media(max-width:700px){.jd-review-head{align-items:flex-start;flex-direction:column}.jd-rating-card{grid-template-columns:auto auto}.jd-trend-list{grid-template-columns:repeat(4,1fr)}.jd-review-body-head,.jd-review-footer{align-items:flex-start;flex-direction:column}.jd-review-cards{grid-template-columns:1fr}.jd-review-actions{width:100%}.jd-review-action{flex:1}.jd-review-panel{border-radius:20px}}
 /* Desktop sizing: use wide screens without letting text and artwork drift apart. */
 @media(min-width:1200px){
-  .wrap{width:min(1680px,calc(100% - 96px))}
+  .wrap{width:calc(100% - clamp(40px,4vw,96px));max-width:none}
   .hero{padding:72px 0 82px}
-  .hero-grid{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);gap:clamp(54px,6vw,96px)}
-  .hero h1{max-width:740px;font-size:clamp(58px,4.5vw,78px)}
-  .lead{max-width:570px;font-size:17px}
-  .hero-visual{min-height:540px}
+  .hero-grid{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);gap:clamp(36px,4vw,80px)}
+  .hero h1{max-width:none;font-size:clamp(58px,4.5vw,78px)}
+  .lead{max-width:760px;font-size:17px}
+  .hero-visual{min-height:clamp(540px,34vw,680px)}
+  .section-head{max-width:960px}
+  .section-head p{max-width:760px}
+  .subnote{max-width:940px}
+  .about-picture,.about-picture img{min-height:clamp(460px,32vw,620px);height:clamp(460px,32vw,620px)}
+  .learning-card-visual,.process-grid .step-image{height:clamp(220px,17vw,310px)}
+  .map-card iframe{height:clamp(500px,36vw,700px)}
+  .quote-box blockquote{max-width:980px}
+  .contact-copy>p{max-width:650px}
+  .availability-copy,.footer-intro{max-width:none}
   .proofbar{padding:24px 0}
 }
 @media(min-width:701px) and (max-width:1199px){
